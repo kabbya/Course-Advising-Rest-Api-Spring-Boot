@@ -45,4 +45,31 @@ public class CourseServiceImpl implements CourseService {
 		return courses;
 	}
 
+	@Override
+	public Courses updateCourse(Courses courses) {
+		for(Courses iter:listOfCourses) {
+			if( iter.getCid()==courses.getCid()) {
+				iter.setDescription(courses.getDescription());
+				iter.setTitle(courses.getTitle());
+				break;
+			}
+		}
+		return courses;
+	}
+
+	@Override
+	public void deleteCourse(Long courseId) {
+		
+		int index=0;
+		for(Courses iter:listOfCourses) {
+			if( iter.getCid()==courseId) {
+				break;
+			}
+			index++;
+		}
+		
+		listOfCourses.remove(index);
+		
+	}
+
 }
