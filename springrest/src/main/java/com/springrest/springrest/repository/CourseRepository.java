@@ -1,4 +1,4 @@
-package com.springrest.springrest.dao;
+package com.springrest.springrest.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -6,6 +6,6 @@ import com.springrest.springrest.entity.Courses;
 
 // long primary key data type
 
-public interface CourseDao extends JpaRepository<Courses, Long>{
+public interface CourseRepository extends JpaRepository<Courses, Long>{
 
 }
